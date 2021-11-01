@@ -10,4 +10,9 @@ public class InitTest {
     public void justReturnOne() {
         assertThat(new Init().justReturnOne(), is(1));
     }
+
+    @Test
+    public void justGetOneAgain() {
+        assertNotEquals(2, new Init().justReturnOne());
+    }
 }
