@@ -22,3 +22,5 @@ create table users (
                        id serial primary key,
                        name varchar
 );
+
+alter table cars add column created timestamp;

@@ -1,6 +1,7 @@
 package ru.job4j.auto;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -27,6 +28,9 @@ public class Car {
     private int price;
     private boolean status = true;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date created;
+
     public static Car of(String brand, String model, Transmission transmission,
                          Body body, Engine engine, int year, int price,
                          User user, Photo photo) {
@@ -40,6 +44,7 @@ public class Car {
         car.price = price;
         car.user = user;
         car.photo = photo;
+        car.created = new Date(System.currentTimeMillis());
         return car;
     }
 
@@ -129,6 +134,14 @@ public class Car {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
     }
 
     @Override
