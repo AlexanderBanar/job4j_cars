@@ -49,7 +49,7 @@ public class AdRepository {
                 session -> {
                     Query<Car> query = session.createQuery(
                             "select distinct c from Car c join fetch c.user join fetch c.photo "
-                                    + "where c.created = CURRENT_DATE");
+                                    + "where c.created = CURRENT_DATE - hour(24)");
                     return query.list();
                 }
         );
