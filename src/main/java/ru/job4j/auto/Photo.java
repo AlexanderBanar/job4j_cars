@@ -1,7 +1,5 @@
 package ru.job4j.auto;
 
-import java.nio.file.Path;
-
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -15,7 +13,7 @@ public class Photo {
     private boolean isAvailable;
     private String path;
 
-    public Photo of(String path) {
+    public static Photo of(String path) {
         Photo photo = new Photo();
         photo.path = path;
         photo.isAvailable = true;

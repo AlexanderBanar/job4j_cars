@@ -24,3 +24,4 @@ create table users (
 );
 
 alter table cars add column created timestamp;
+alter table users add column password varchar;

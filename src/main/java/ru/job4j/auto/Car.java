@@ -21,9 +21,9 @@ public class Car {
 
     private String brand;
     private String model;
-    private Transmission transmission;
-    private Body body;
-    private Engine engine;
+    private String transmission;
+    private String body;
+    private String engine;
     private int year;
     private int price;
     private boolean status = true;
@@ -31,8 +31,8 @@ public class Car {
     @Temporal(TemporalType.TIMESTAMP)
     private Date created;
 
-    public static Car of(String brand, String model, Transmission transmission,
-                         Body body, Engine engine, int year, int price,
+    public static Car of(String brand, String model, String transmission,
+                         String body, String engine, int year, int price,
                          User user, Photo photo) {
         Car car = new Car();
         car.brand = brand;
@@ -88,27 +88,27 @@ public class Car {
         this.model = model;
     }
 
-    public Transmission getTransmission() {
+    public String getTransmission() {
         return transmission;
     }
 
-    public void setTransmission(Transmission transmission) {
+    public void setTransmission(String transmission) {
         this.transmission = transmission;
     }
 
-    public Body getBody() {
+    public String getBody() {
         return body;
     }
 
-    public void setBody(Body body) {
+    public void setBody(String body) {
         this.body = body;
     }
 
-    public Engine getEngine() {
+    public String getEngine() {
         return engine;
     }
 
-    public void setEngine(Engine engine) {
+    public void setEngine(String engine) {
         this.engine = engine;
     }
 
