@@ -1,6 +1,6 @@
 package ru.job4j.servlets;
 
-import ru.job4j.auto.AdRepository;
+import ru.job4j.store.AdRepository;
 import ru.job4j.auto.Car;
 import ru.job4j.auto.Photo;
 import ru.job4j.auto.User;

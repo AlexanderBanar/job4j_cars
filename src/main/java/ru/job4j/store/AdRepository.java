@@ -1,4 +1,4 @@
-package ru.job4j.auto;
+package ru.job4j.store;
 
 import java.util.Date;
 import java.util.List;
@@ -10,6 +10,8 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.query.Query;
+import ru.job4j.auto.Car;
+import ru.job4j.auto.User;
 
 public class AdRepository {
     private final StandardServiceRegistry registry;

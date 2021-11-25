@@ -32,7 +32,7 @@
             <% } %>
         </li>
 
-        <h1>ENTER NEW AD DATA</h1>
+        <h2>ENTER NEW AD DATA</h2>
         <br>
         <br>
 

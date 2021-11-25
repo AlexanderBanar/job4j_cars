@@ -9,7 +9,7 @@ import java.util.Collection;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import ru.job4j.auto.Car;
-import ru.job4j.auto.AdRepository;
+import ru.job4j.store.AdRepository;
 
 public class FindAllAdsServlet extends HttpServlet {
     @Override

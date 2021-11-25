@@ -118,21 +118,42 @@
 
 <body>
 
-<a href="<%=request.getContextPath()%>/new.jsp">Fill in a new ad</a>
-<br>
-<br>
+<div class="container">
+    <h2>Welcome to regional widest car advertisement store</h2>
+    <h3>Post your ad with few clicks or list below ads</h3>
+</div>
 
-<button onclick="loadCurAds();">Filter today's ads</button>
-<br>
-<br>
+<div class="container">
+    <a href="<%=request.getContextPath()%>/new.jsp">Fill in a new ad</a>
+    <br>
+    <img src="4.JPG" alt="no photo4" width="300">
+    <br>
+    <br>
+</div>
 
-<button onclick="photoAds();">Filter ads with photo</button>
-<br>
-<br>
+<div class="container">
+    <button onclick="loadCurAds();">Filter today's ads</button>
+    <br>
+    <img src="5.JPG" alt="no photo5" width="300">
+    <br>
+    <br>
+</div>
 
-<a href="<%=request.getContextPath()%>/myads.jsp">Show and edit my own ads</a>
-<br>
-<br>
+<div class="container">
+    <button onclick="photoAds();">Filter ads with photo</button>
+    <br>
+    <img src="6.JPG" alt="no photo6" width="300">
+    <br>
+    <br>
+</div>
+
+<div class="container">
+    <a href="<%=request.getContextPath()%>/myads.jsp">Show and edit my own ads</a>
+    <br>
+    <img src="7.JPG" alt="no photo7" width="300">
+    <br>
+    <br>
+</div>
 
 <div class="container">
     <div class="row pt-3">

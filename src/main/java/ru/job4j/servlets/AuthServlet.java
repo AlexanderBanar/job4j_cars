@@ -1,7 +1,7 @@
 package ru.job4j.servlets;
 
 import ru.job4j.auto.User;
-import ru.job4j.auto.AdRepository;
+import ru.job4j.store.AdRepository;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
