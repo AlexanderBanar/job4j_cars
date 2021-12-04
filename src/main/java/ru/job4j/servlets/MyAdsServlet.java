@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import ru.job4j.store.AdRepository;
 import ru.job4j.auto.Car;
 import ru.job4j.auto.User;
+import ru.job4j.store.CarRepository;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +33,7 @@ public class MyAdsServlet extends HttpServlet {
         int idToClose = Integer.parseInt(req.getParameter("closedAd"));
         HttpSession sc = req.getSession();
         User user = (User) sc.getAttribute("user");
-        AdRepository.instOf().closeCarAd(user, idToClose);
+        CarRepository.instOf().closeCarAd(user, idToClose);
         req.getRequestDispatcher("/myads.jsp").forward(req, resp);
     }
 }

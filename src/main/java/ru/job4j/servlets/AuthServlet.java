@@ -1,7 +1,7 @@
 package ru.job4j.servlets;
 
 import ru.job4j.auto.User;
-import ru.job4j.store.AdRepository;
+import ru.job4j.store.UserRepository;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +15,7 @@ public class AuthServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");
         String password = req.getParameter("password");
-        User userSearchedInDB = AdRepository.instOf().getUser(User.of(name, password));
+        User userSearchedInDB = UserRepository.instOf().getUser(User.of(name, password));
         if (userSearchedInDB != null) {
             HttpSession sc = req.getSession();
             sc.setAttribute("user", userSearchedInDB);

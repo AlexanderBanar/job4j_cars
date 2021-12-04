@@ -1,9 +1,9 @@
 package ru.job4j.servlets;
 
-import ru.job4j.store.AdRepository;
 import ru.job4j.auto.Car;
 import ru.job4j.auto.Photo;
 import ru.job4j.auto.User;
+import ru.job4j.store.CarRepository;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +19,17 @@ public class NewAdServlet extends HttpServlet {
         User user = (User) session.getAttribute("user");
         Photo photo = Photo.of("empty path");
         photo.setAvailable(false);
+
+        System.out.println(req.getParameter("year"));
+        System.out.println(req.getParameter("brand"));
+        System.out.println(req.getParameter("model"));
+        System.out.println(req.getParameter("transmission"));
+        System.out.println(req.getParameter("body"));
+        System.out.println(req.getParameter("engine"));
+        System.out.println(req.getParameter("price"));
+
+
+
         Car car = Car.of(
                 req.getParameter("brand"),
                 req.getParameter("model"),
@@ -30,7 +41,7 @@ public class NewAdServlet extends HttpServlet {
                 user,
                 photo
         );
-        AdRepository.instOf().saveCar(car);
+        CarRepository.instOf().saveCar(car);
         resp.sendRedirect(req.getContextPath() + "/ads.jsp");
     }
 }

@@ -22,20 +22,20 @@
 </head>
 <body>
 
-<form action="<%=request.getContextPath()%>/newAd.do" method="post" enctype="multipart/form-data">
+<li class="nav-item">
+    <% if (request.getSession().getAttribute("user") == null) { %>
+    <a class="nav-link" href="<%=request.getContextPath()%>/index.jsp">Login</a>
+    <% } else { %>
+    <a class="nav-link" href="<%=request.getContextPath()%>/logout.do"> <c:out value="${user.name}"/> | Logout</a>
+    <% } %>
+</li>
+
+<h2>ENTER NEW AD DATA</h2>
+<br>
+<br>
+
+<form action="<%=request.getContextPath()%>/newAd.do" method="post">
     <div>
-        <li class="nav-item">
-            <% if (request.getSession().getAttribute("user") == null) { %>
-            <a class="nav-link" href="<%=request.getContextPath()%>/index.jsp">Login</a>
-            <% } else { %>
-            <a class="nav-link" href="<%=request.getContextPath()%>/logout.do"> <c:out value="${user.name}"/> | Logout</a>
-            <% } %>
-        </li>
-
-        <h2>ENTER NEW AD DATA</h2>
-        <br>
-        <br>
-
         <p><b>Type in brand</b><br>
         <input type="text" name="brand" size="40" placeholder="brand" required>
         <br>
